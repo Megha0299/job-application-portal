@@ -1,55 +1,49 @@
-# Recruitment & Job Application Portal 
+# recruitment and job application portal
 
-A full-stack web-based recruitment portal built using PHP (CodeIgniter) and MySQL that supports multi-step candidate applications, document management, and administrative tracking.
+a full-stack recruitment portal built with PHP CodeIgniter and MySQL featuring a multi-step candidate application form, public tracking timeline, bot security, and an admin hiring dashboard.
 
-## Features
+## features
 
-### Candidate Portal
-- **3-Step Application Process:**
-  - Step 1: Basic Information & Personal Details.
-  - Step 2: Academic Background & Technical Skills (hybrid checklist + custom inputs).
-  - Step 3: Experience Level, Declarations, and Resume File Upload (PDF/DOC/DOCX).
-- **Validation:** Client-side JavaScript and server-side PHP validation on required fields.
+### 1. candidate application form
+* multi-step form with basic info, academic details, and experience[cite: 5, 6].
+* client-side and server-side validation on all required inputs[cite: 6].
+* automatic hide and show for fresher and experienced candidates.
+* live 300-character counter for skills summary.
+* secure resume upload for PDF and DOC files up to 5 MB[cite: 6].
+* Google reCAPTCHA v2 bot protection on step 3.
 
-### Admin Dashboard (Out-of-Scope Enhancements Delivered)
-- **Authentication:** Protected admin login with session verification.
-- **Analytics Cards:** Real-time counters for Total Applications, Freshers, and Experienced candidates.
-- **Search & Filter:** Keyword search by candidate name/email/skills and dropdown filter by experience.
-- **Candidate Detail Modal:** View complete profile submissions in an overlay.
-- **Document Management:** Direct download link for resumes and safe record deletion with physical file cleanup.
-- **Data Portability:** One-click CSV/Excel export for HR reporting.
+### 2. candidate status tracker
+* applicants check their progress using Reference ID and registered email.
+* visual progress stepper showing Application Submitted, In Review, and Shortlisted.
+* smooth reloads without form resubmission warnings.
 
----
+### 3. admin dashboard
+* secure admin login and session management[cite: 2].
+* live summary counters for total candidates, freshers, and experienced applicants[cite: 2].
+* candidate search bar and experience filters[cite: 2].
+* descending table order showing the newest applications at the top.
+* candidate details view modal[cite: 2].
+* direct resume download[cite: 2].
+* status updater for submitted, under review, shortlisted, and rejected[cite: 2].
+* instant CSV export for HR reporting[cite: 2].
 
-## Tech Stack
-- **Frontend:** HTML5, CSS3, JavaScript, SVG Icons
-- **Backend:** PHP (CodeIgniter Framework)
-- **Database:** MySQL
-- **Server:** Apache (XAMPP)
+## tech stack
+* backend: PHP with CodeIgniter 3[cite: 7]
+* database: MySQL[cite: 7]
+* frontend: HTML5, CSS3, JavaScript[cite: 7]
+* environment: Apache via XAMPP[cite: 7]
 
----
+## how to run this project
 
-## Installation & Setup
+1. copy the `job-portal` folder into your `htdocs` directory:
+   `D:/PHP/htdocs/job-portal` or `C:/xampp/htdocs/job-portal`
+2. open phpMyAdmin at `http://localhost/phpmyadmin`.
+3. create a database named `job_portal`[cite: 7].
+4. click import and select your `database.sql` file.
+5. open `application/config/database.php` and set your username and password.
+6. open `application/config/config.php` and set base URL to `http://localhost/job-portal/`.
 
-1. **Clone / Copy Project:**
-   Place the `job-portal` folder inside your Apache root directory:
-   `C:/xampp/htdocs/job-portal` or `D:/PHP/htdocs/job-portal`
-
-2. **Database Setup:**
-   - Open phpMyAdmin (`http://localhost/phpmyadmin`).
-   - Create a database named `job_portal`.
-   - Import the database script located at `database/job_portal.sql`.
-
-3. **Verify Configuration:**
-   - Database credentials in `application/config/database.php` (default: `localhost`, user `root`, no password).
-   - Base URL in `application/config/config.php` set to `http://localhost/job-portal/`.
-
-4. **Uploads Directory:**
-   Ensure `uploads/resumes/` exists and has write permissions.
-
----
-
-## Access URLs
-- **Candidate Application Form:** `http://localhost/job-portal/index.php/apply`
-- **Admin Management Login:** `http://localhost/job-portal/index.php/admin/login`
-- **Admin Dashboard:** `http://localhost/job-portal/index.php/admin/dashboard`
+## project URLs
+* apply page: `http://localhost/job-portal/index.php/apply`[cite: 4]
+* tracking page: `http://localhost/job-portal/index.php/track`
+* admin dashboard: `http://localhost/job-portal/index.php/admin/dashboard`[cite: 3]
