@@ -1,4 +1,4 @@
-# recruitment and job application portal
+Recruitment & Job Application Portal
 
 a full-stack recruitment portal built with PHP CodeIgniter and MySQL featuring a multi-step candidate application form, public tracking timeline, bot security, and an admin hiring dashboard.
 
