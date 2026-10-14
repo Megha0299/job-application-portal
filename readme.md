@@ -1,4 +1,4 @@
-# Recruitment & Job Application Portal (Phase 1)
+# Recruitment & Job Application Portal 
 
 A full-stack web-based recruitment portal built using PHP (CodeIgniter) and MySQL that supports multi-step candidate applications, document management, and administrative tracking.
 
